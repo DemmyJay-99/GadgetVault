@@ -13,9 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scroll">
     <section id="home" class="home fade"> 
         <div class="home-content">
-        <h1 class="fade">Premium Tech Gadgets</h1>
+        <h1 class="fade intro-head">Premium Tech Gadgets</h1>
+        <h1 class="fade no">Premium <br>Tech<br>Gadgets<br></h1>
         <p class="fade">
         Discover the latest in cutting-edge technology.
         From smart devices to innovative accessories, we've got everything you need to stay ahead.
@@ -133,8 +135,12 @@
             <button class="subscribe">Subscribe</button>
         </form>
     </section>
+    </div>
 
     <script defer src="scripts/main.js"></script>
+    <script>
+        window.location.replace("about.php");
+    </script>
     
 </body>
 </html>

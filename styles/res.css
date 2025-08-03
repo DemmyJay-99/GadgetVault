@@ -1,4 +1,10 @@
 @media (max-width: 768px) {
+    .home .no{
+        display: inline;
+    }
+    .home .intro-head{
+        display: none;
+    }
     .products, .categories {
         padding: 10px 20px;
     }
@@ -17,7 +23,7 @@
         font-size: 1.4rem;
     }
 
-    .home h1 {
+    .home .intro-head {
         font-size: 2rem;
         margin-top: 0;
     }
