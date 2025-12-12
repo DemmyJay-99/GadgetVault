@@ -56,12 +56,31 @@ section.is-visible {
 
 .home {
     height: 100vh;
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
-    /* background-image: url(../images/593713e5-3a82-49c0-8304-4f7a76ea902a.webp); */
     align-items: center;
     text-align: center;
     animation: slideup 1s ease-out;
+    gap: 1rem;
+    .intro-left{
+        padding-left: 30px;
+        padding-top: 100px;
+        display: flex;
+        align-items: start;
+        width: 60%;
+        height: 100%;
+        /* border: 2px solid #fff; */
+        .intro-title{
+            font-size: 2.6rem;
+            text-align: start;
+            font-weight: 500;
+        }
+    }
+    .intro-right{
+        width: 50%;
+        height: 100%;
+        /* border: 2px solid #fff;      */
+    }
 }
 
 .home .no{

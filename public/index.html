@@ -7,24 +7,68 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/res.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+        <header>
+        <nav class="menu">
+            <h3 class="gadgets">GadgetVault</h3>
+            <div class="links">
+            <a href="#home" class="underline">Home</a>
+            <a href="#products" class="underline">Products</a>
+            <a href="#categories" class="underline">Categories</a>
+            <a href="#contacts" class="underline">Contact</a>
+            </div>
+        </nav>
+
+
+
+                <div class="mobile-title">
+                <h1 class="gadgets lala">GadgetVault</h1>
+                <ion-icon name="menu-outline" class="hamburger"></ion-icon>
+                </div>
+
+
+            <nav class="mobile">
+            <ul class="list">
+                <div class="list-item">
+            <li>
+                <ion-icon name="home-outline"></ion-icon>
+                <a href="#">Home</a>
+            </li>
+            </div>
+            <li>
+                <ion-icon name="bag-outline"></ion-icon>
+                <a href="#">Products</a>
+            </li>
+            <li>
+                <ion-icon name="apps-outline"></ion-icon>
+                <a href="#">Categories</a>
+            </li>
+            <li>
+                <ion-icon name="person-add-outline"></ion-icon>
+                <a href="#">Contact</a>
+            </li>
+            </ul>
+            </details>
+            </nav>
+    </header>
+
     <div class="scroll">
     <section id="home" class="home fade"> 
-        <div class="home-content">
-        <h1 class="fade intro-head">Premium Tech Gadgets</h1>
-        <h1 class="fade no">Premium <br>Tech<br>Gadgets<br></h1>
-        <p class="fade">
-        Discover the latest in cutting-edge technology.
-        From smart devices to innovative accessories, we've got everything you need to stay ahead.
-        </p>
-        <div class="button-div fade">
-        <a href="#products">Explore Products</a>
+        <div class="intro-left">
+            <div class="intro-title"><span>High-end</span>
+                <br>
+                <span>Devices & Gadgets</span>
+                <br>
+                <span>Built for Performance.</span></div>
         </div>
+        <div class="intro-right">
+
         </div>
     </section>
 
@@ -136,11 +180,50 @@
         </form>
     </section>
     </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Products</h3>
+                <a href="#">Smartphones</a>
+                <a href="#">Laptops</a>
+                <a href="#">Audio</a>
+                <a href="#">Wearables</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Warranty</a>
+                <a href="#">Shipping Info</a>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h2>Connect With Us</h2>
+            <div class="socials">
+                <div class="social-content">
+                <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="social-content">
+                <i class="fa-brands fa-square-x-twitter"></i>                
+                </div>
+                <div class="social-content">
+                <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="social-content">
+                <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script defer src="scripts/main.js"></script>
-    <script>
-        window.location.replace("about.php");
-    </script>
     
 </body>
 </html>

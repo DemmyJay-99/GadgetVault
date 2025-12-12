@@ -1,0 +1,31 @@
+{
+  "name": "gadget",
+  "version": "1.0.0",
+  "description": "Full stack E-commerce site",
+  "homepage": "https://github.com/DemmyJay-99/F-commerce#readme",
+  "bugs": {
+    "url": "https://github.com/DemmyJay-99/F-commerce/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemmyJay-99/F-commerce.git"
+  },
+  "license": "ISC",
+  "author": "Mellow (Demmjay-99)",
+  "type": "module",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "express": "^5.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongoose": "^9.0.1"
+  }
+}

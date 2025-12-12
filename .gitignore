@@ -1,2 +1,4 @@
 test/
-scroll/
+/.vscode
+/data
+/node_modules
