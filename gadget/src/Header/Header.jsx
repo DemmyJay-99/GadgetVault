@@ -29,8 +29,8 @@ function Header() {
                 </div>
                 <div className={styles.navLinks}>
                     <a href='#home'>Home</a>
-                    <a href='#services'>Services</a>
-                    <a href='#about'>About Us</a>
+                    <a href='#services'>Products</a>
+                    <a href='#about'>Categories</a>
                     <a href='#'>Contact</a>
                 </div>
                 <div className={styles.navRight}>
@@ -48,8 +48,8 @@ function Header() {
             </nav>
             <div className={styles.mobileLinks} id='mobileLinks'>
                 <a href='#home'>Home</a>
-                <a href='#services'>Services</a>
-                <a href='#about'>About Us</a>
+                <a href='#services'>Products</a>
+                <a href='#about'>Categories</a>
                 <a href='#'>Contact</a>
             </div>
         </header>
