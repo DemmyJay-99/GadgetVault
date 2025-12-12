@@ -1,0 +1,238 @@
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    place-items: center;
+    gap: 1rem;
+    /* justify-content: space-between; */
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #0f0920;
+    /* border-bottom:solid 1px black; */
+    padding: 20px;
+    max-height: 90px;
+    z-index: 2;
+    /* gap: em; */
+    *{
+        color: #fff;
+    }
+}
+
+nav.scrolled{
+    /* padding-bottom: 18px; */
+    /* padding-top: 10px; */
+    backdrop-filter: var(--navbar-blur);
+    -webkit-backdrop-filter: var(--navbar-blur);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navLeft{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    place-content: start;
+    place-items: center;
+    width: 30%;
+    /* background-color: blue */
+    /* width: 40px; */
+}
+
+.navLeft:nth-child(odd){
+    font-size: 2rem;
+}
+
+.logoText{
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    /* background-color: black; */
+    text-align: center;
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.navLinks{
+    display: flex;
+    gap: 1rem;
+    width: 50%;
+    place-content: center;
+    gap: 1.5rem;
+    /* font-size: 1.1rem; */
+    padding: 10px 30px;
+    /* background-color: black; */
+    a{
+        text-decoration: none;
+        position: relative;
+    }
+    a::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0%;
+        height: 2px;
+        background-color: blue;
+        transition: width 0.4s ease;
+    }
+    a:hover::after{
+        width: 100%;
+    }
+}
+
+.navRight{
+    /* border: 1px solid #fff; */
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    *{
+        transition: .4s;
+        cursor: pointer;
+        &:hover{
+            color: blue;
+        }
+    }
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: .8rem;
+    cursor: pointer;
+}
+
+.bar{
+    width: 50px;
+    height: 3px;
+    border-radius: 30px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(20px);
+    margin-left: 13px;
+    width: 45px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(-24px);
+    width: 45px;
+    margin-left: 15px;
+}
+
+.mobileLinks{
+    display: none;
+}
+
+.contact{
+    width: 150px;
+    height: 50px;
+    border: 1px solid;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: .4s;
+    &:hover{
+        background-color: rgb(51, 13, 98);
+        border: 1px solid #1c1c1c;
+        color: #fff;
+    }
+}
+
+@media (max-width: 960px) {
+   .navLeft{
+        width: 90%;
+        .logoText{
+            font-size: 2rem;
+        }
+    }
+    .navLinks{
+        display: none;
+    }
+    .navRight{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+    }
+    
+    .mobileLinks{
+        position: fixed;
+        left: -250px;
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        background-color: #ededed;
+        gap: 2.9rem;
+        padding: 30px;
+        min-height: 60vh;
+        width: 100%;
+        color: #000000;
+        transition:.5s ease;
+        margin-top: 80px;
+        z-index: 2;
+        a{
+            position: relative;
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background-color: rgb(2, 50, 242);
+            transition: width .4s ease;
+        }
+        a:hover::after{
+            width: 100%;
+        }
+    }
+
+        .mobileLinks.show{
+            opacity: 1;
+            left: 0;
+        }
+    .contact{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+ 
+}
+
+@media (max-width: 480px) {
+    .navLeft{
+        /* flex: 1.5; */
+        /* width: 70%; */
+        /* background-color: #000; */
+        .logoText{
+            font-size: 1.3rem;
+        }
+    }
+    .hamburger{
+        /* background-color: yellow; */
+        gap: 0.5rem;
+        /* width: 25px; */
+    }
+    .bar{
+        width: 35px;
+    }
+}
