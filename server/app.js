@@ -6,7 +6,7 @@ dotenv.config()
 
 const app = express();
 const URI = process.env.MONGO_URI
-
+app.use(express.static("./public"))
 app.use(express.json())
 app.use("/api/products", router)
 
