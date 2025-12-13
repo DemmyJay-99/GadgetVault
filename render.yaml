@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: php-app
-    env: docker
-    plan: free
-    repo: yourusername/your-repo
-    branch: main
-    rootDir: .
