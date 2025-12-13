@@ -60,6 +60,8 @@ nav.scrolled{
     /* font-size: 1.1rem; */
     padding: 10px 30px;
     /* background-color: black; */
+    pointer-events: auto;
+
     a{
         text-decoration: none;
         position: relative;
@@ -128,6 +130,7 @@ nav.scrolled{
 
 .mobileLinks{
     display: none;
+    pointer-events: auto;
 }
 
 .contact{
@@ -184,6 +187,7 @@ nav.scrolled{
         transition:.5s ease;
         margin-top: 80px;
         z-index: 2;
+        pointer-events: none;
         a{
             position: relative;
             color: #000000;
@@ -208,6 +212,7 @@ nav.scrolled{
         .mobileLinks.show{
             opacity: 1;
             left: 0;
+            pointer-events: auto;
         }
     .contact{
         display: none;
