@@ -6,9 +6,19 @@ const ProductSchema = new mongoose.Schema({
         required: true,
         maxlength: [20]
     },
+    description: {
+        type: String,
+        required: true,
+        maxlength: [100]
+    },
     price: {
         type: Number,
         required: true,
+    },
+    category: {
+        type: String,
+        required: true,
+        maxlength: [20]
     }
 })
 

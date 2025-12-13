@@ -8,7 +8,18 @@ const addProduct = async(req, res) =>{
         res.send(error)
         console.log(error)
     }
-
+}
+const listProducts = async(req, res) =>{
+    try{
+        const product = await Product.find({})
+        res.status(201).json({product})
+    } catch (error){
+        res.send(error)
+        console.log(error)
+    }
 }
 
-export default addProduct
+export {
+    addProduct,
+    listProducts
+}

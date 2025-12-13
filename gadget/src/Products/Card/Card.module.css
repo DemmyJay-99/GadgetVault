@@ -1,0 +1,87 @@
+.card{
+    /* min-width: 50vw; */
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    min-height: 600px;
+    /* background-color: #fff; */
+    border-radius: 15px;
+    padding: 8px;
+    transition: .4s;
+    z-index: 0;
+    a{
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: rgb(51, 13, 98);
+        margin-top: 30px;
+    }
+    &:hover{
+        /* border: 1px solid; */
+        box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        /* background-color: #000; */
+    }
+}
+
+.cardTop{
+    height: 60%;
+    background-color: blue;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.cardBottom{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    padding: 20px;
+    background-color: rgb(77, 12, 61);
+    border-radius: 0 0 15px 15px;
+    gap: 1rem;
+    .category{
+        font-size: .8rem;
+        text-transform: uppercase;
+        color: blue;
+    }
+    .name{
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+    .price{
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+}
+
+.cardDetails{
+    margin-top: 30px;
+}
+
+.textWrapper{
+    display: flex;
+    gap: 1.4rem;
+    place-items: center;
+    /* border: 1px solid; */
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .card{
+        /* gap: .2rem; */
+        padding: 15px;
+    }
+    .desc{
+        line-height: normal;
+        font-size: 1rem;
+    }
+    .textWrapper{
+        gap: 1rem;
+        text-align: start;
+    }
+}
+
+@media (max-width: 490px) {
+        .icon{
+        font-size: 2rem;
+    }
+}
