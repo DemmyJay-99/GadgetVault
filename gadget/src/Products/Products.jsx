@@ -31,6 +31,7 @@ function Services(){
                 <div className={styles.wrapper}>
                     <Card/>
                 </div>
+                <a href='#' className={styles.link}>View Products</a>
             </section>
         </>
     )
