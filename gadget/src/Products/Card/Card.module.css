@@ -54,7 +54,18 @@
 }
 
 .cardDetails{
+    display: flex;
+    place-items: center;
+    place-content: space-between;
     margin-top: 30px;
+    .icon{
+        background-color: blue;
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
 
 .textWrapper{

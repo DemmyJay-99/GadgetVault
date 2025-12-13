@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './Card.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function Card(){
     const [products, setProducts] = useState([])
@@ -34,7 +35,7 @@ function Card(){
                             <span className={styles.description}>{product.description}</span>
                             <div className={styles.cardDetails}>
                                 <span className={styles.price}>${product.price}</span>
-                                <span>🛒</span>
+                                <FontAwesomeIcon icon={faShoppingCart} className={styles.icon}/>
                             </div>
                         </div>
                     </div>
