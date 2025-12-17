@@ -15,6 +15,7 @@ function Card(){
             console.log(data.product)
             } catch(error){
                 console.error(error)
+                return (<div>Error: {error}</div>)
             } finally{
                 setLoading(false)
             }
@@ -33,28 +34,22 @@ function Card(){
                                 return <div className={styles.cardTop}>
                                         <FontAwesomeIcon icon={faMobile} />
                                         </div>
-                                break;
                             case "Computing":
                                 return <div className={styles.cardTop}>
                                     <FontAwesomeIcon icon={faLaptop} />
                                     </div>
-                                break;
                             case "Wearable":
                                 return <div className={styles.cardTop}/>
-                                break;
                             case "Tablet":
                                 return <div className={styles.cardTop}/>
-                                break;
                             case "Photography":
                                 return <div className={styles.cardTop}>
                                     <FontAwesomeIcon icon={faCamera}/>
                                     </div>
-                                break;
                             case "Audio":
                                 return <div className={styles.cardTop}>
                                     <FontAwesomeIcon icon={faHeadphones} />
                                 </div>
-                                break;
                         
                             default:
                                 break;
