@@ -21,7 +21,7 @@ function Services(){
         });
     return(
         <>
-            <section id="services" className={styles.services}>
+            <section id="products" className={styles.services}>
                 <div className={styles.head}>
                     <h1 className={styles.headTitle}>Featured Products</h1>
                     <p className={styles.headSubtitle}>

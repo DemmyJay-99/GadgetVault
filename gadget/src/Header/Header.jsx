@@ -29,9 +29,9 @@ function Header() {
                 </div>
                 <div className={styles.navLinks}>
                     <a href='#home'>Home</a>
-                    <a href='#services'>Products</a>
-                    <a href='#about'>Categories</a>
-                    <a href='#'>Contact</a>
+                    <a href='#products'>Products</a>
+                    <a href='#categories'>Categories</a>
+                    <a href='#contact'>Contact</a>
                 </div>
                 <div className={styles.navRight}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -48,9 +48,9 @@ function Header() {
             </nav>
             <div className={styles.mobileLinks} id='mobileLinks'>
                 <a href='#home'>Home</a>
-                <a href='#services'>Products</a>
-                <a href='#about'>Categories</a>
-                <a href='#'>Contact</a>
+                <a href='#products'>Products</a>
+                <a href='#categories'>Categories</a>
+                <a href='#contact'>Contact</a>
             </div>
         </header>
         </>
