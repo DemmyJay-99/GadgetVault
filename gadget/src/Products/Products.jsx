@@ -1,7 +1,6 @@
 import styles from './Products.module.css';
 import Card from './Card/Card';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faScaleBalanced, faUsers, faFileAlt, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 function Services(){
     const scroll = document.querySelectorAll('#scroll')
