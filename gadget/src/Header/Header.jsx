@@ -1,8 +1,10 @@
 import styles from './Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBolt, faUser, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useCookies } from 'react-cookie';
 
 function Header() {
+    const [cookies] = useCookies(['token'])
 
     function showLinks(){
         const links = document.getElementById('mobileLinks');
@@ -34,9 +36,21 @@ function Header() {
                     <a href='#contact'>Contact</a>
                 </div>
                 <div className={styles.navRight}>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    {/* <FontAwesomeIcon icon={faMagnifyingGlass} />
                     <FontAwesomeIcon icon={faCartShopping} />
-                    <FontAwesomeIcon icon={faUser} />
+                    <FontAwesomeIcon icon={faUser} /> */}
+                    {cookies.token ? (
+                        <>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        <FontAwesomeIcon icon={faCartShopping} />
+                        <FontAwesomeIcon icon={faUser} />
+                        </>
+                    ) : (
+                        <>
+                            <a href='/login'>Log in</a>
+                            <a href='/signup'>Sign Up</a>
+                        </>
+                )}
                 </div>
                 <div className={styles.mobileMenu}>
                     <div className={styles.hamburger} onClick={showLinks} id='hamburger'>

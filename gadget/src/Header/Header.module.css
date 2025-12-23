@@ -94,6 +94,15 @@ nav.scrolled{
             color: blue;
         }
     }
+    a{
+        font-size: 1rem;
+        text-decoration: none;
+        border: 1px solid;
+        border-radius: 15px;
+        width: 70px;
+        text-align: center;
+        padding: 10px 0px;
+    }
 }
 
 .hamburger{

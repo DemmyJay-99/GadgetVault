@@ -9,7 +9,7 @@ function Card(){
     useEffect(()=>{
         async function fetchProducts(){
             try{
-            const response = await fetch('http://127.0.0.1:3000/api/products');
+            const response = await fetch('http://127.0.0.1:4000/api/products');
             const data = await response.json();
             setProducts(data.product)
             console.log(data.product)
