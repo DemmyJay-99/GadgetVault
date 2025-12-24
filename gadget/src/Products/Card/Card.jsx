@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useCookies} from 'react-cookie'
 import styles from './Card.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobile, faShoppingCart, faLaptop, faCamera, faHeadphones } from '@fortawesome/free-solid-svg-icons';

@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
+import styles from './Login.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
 
 const Login = () => {
     const navigate = useNavigate()
@@ -58,35 +61,41 @@ const Login = () => {
     };
 
     return (
-        <div className="form_container">
-            <h2>Login Account</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="email">Email</label>
+        <div className={styles.formBody}>
+        <div className={styles.form_container}>
+            <form onSubmit={handleSubmit} className={styles.loginForm}>
+            <h2>Login to your account</h2>
+                <div className={styles.inputGroup}>
                     <input
                         type="email"
                         name="email"
                         value={email}
-                        placeholder="Enter your email"
+                        placeholder="E-mail"
                         onChange={handleOnChange}
                     />
                 </div>
-                <div>
-                    <label htmlFor="password">Password</label>
+                <div className={styles.inputGroup}>
                     <input
                         type="password"
                         name="password"
                         value={password}
-                        placeholder="Enter your password"
+                        placeholder="Password"
                         onChange={handleOnChange}
                     />
                 </div>
-                <button type="submit">Submit</button>
-                <span>
-                    Don't have an account? <Link to={"/signup"}>Signup</Link>
-                </span>
+                <button type="submit">Login</button>
+                <div className={styles.options}>
+                    <div className={styles.first}></div>
+                    <p>or</p>
+                    <div className={styles.second}></div>
+                </div>
+                    <Link to={"/signup"}>Create an account</Link>
             </form>
             <ToastContainer />
+        </div>
+        <div className={styles.gadget}>
+            <h1>GadgetVault</h1>
+        </div>
         </div>
     );
 }
