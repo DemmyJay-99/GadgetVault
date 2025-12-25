@@ -26,6 +26,7 @@ const Login = () => {
     const handleError = (err) =>
         toast.error(err, {
         position: "bottom-left",
+        theme: "dark"
         });
     const handleSuccess = (msg) =>
         toast.success(msg, {
