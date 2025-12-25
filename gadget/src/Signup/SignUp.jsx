@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
 import { ToastContainer, toast} from "react-toastify"
 import styles from '../Login/Login.module.css'
-import signupstyles from './Signup.module.css'
 import image from  '../assets/Logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faArrowRight, faCartShopping, faComputer, faVanShuttle } from '@fortawesome/free-solid-svg-icons'
