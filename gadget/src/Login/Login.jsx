@@ -62,7 +62,7 @@ const Login = () => {
         password: "",
         });
     };
-        function revealPassword(){
+    function revealPassword(){
             const eye = document.getElementById('eye')
             const eyeSlash = document.getElementById('eyeSlash')
             const input = document.getElementById("passwordInput")
@@ -96,6 +96,7 @@ const Login = () => {
                         name="email"
                         value={email}
                         placeholder="Enter your email"
+                        id='email'
                         onChange={handleOnChange}
                     />
                     </div>
@@ -118,7 +119,7 @@ const Login = () => {
                     <FontAwesomeIcon icon={faEyeSlash} className={styles.eyeSlash} id='eyeSlash' onClick={revealPassword}/>
                     </div>
                 </div>
-                <button type="submit">
+                <button type="submit" id='submitBtn'>
                     Login
                     <FontAwesomeIcon icon={faArrowRight}/>
                 </button>
