@@ -1,7 +1,7 @@
 .hero{
     min-height: 100vh;
     display: flex;
-    justify-content: space-between;
+    place-content: space-between;
     padding: 90px 15px;
     place-items: center;
     scroll-margin-top: 80px;
@@ -14,17 +14,18 @@
     /* padding: 20px; */
     padding-top: 40px;
     width: 60%;
-    gap: 1.3rem;
+    gap: .3rem;
     height: 400px;
     h1{
         font-size: 3.5rem;
         font-weight: bolder;
+        text-transform: uppercase;
+        letter-spacing: 7px;
     }
-    span{
+    p{
         font-size: 1.1rem;
         line-height: 2rem;
         width: 500px;
-        color: blue;
     }
 }
 
@@ -79,9 +80,55 @@
 
 .heroRight{
     width: 40%;
-    background-color: rgb(14, 14, 89);
-    height: 400px;
-    border-radius: 20px;
+    height: 450px;
+    /* border: 1px solid; */
+    padding: 0px;
+    .rightTop{
+        /* border: 1px solid; */
+        max-height: 70px;
+        min-height: 60px;
+        padding: 2px;
+        padding-left: 0;
+        display: flex;
+        place-content: start;
+        place-items: center;
+        width: 100%;
+        .search{
+            z-index: 1;
+            transform: translateX(24px);
+        }
+        input{
+            all: unset;
+            height: 45px;
+            min-width: 65%;
+            /* width: 100%; */
+            max-width: 50vw;
+            position: relative;
+            padding-left: 32px;
+            background-color: #4c0b0b;
+            border-radius:10px 0 0px 10px;
+            transition: .2s;
+            &::placeholder{
+                color: #c8b8b8;
+            }
+        }
+        button{
+            display: flex;
+            gap: .7rem;
+            place-content: center;
+            place-items: center;
+            border: 0;
+            outline: 0;
+            background-color: #fff;
+            width: 90%;
+            height: 45px;
+            border-radius: 0 10px 10px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
 }
 
 @media (max-width: 960px) {
