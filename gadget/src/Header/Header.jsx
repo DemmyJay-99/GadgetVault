@@ -38,7 +38,6 @@ function Header() {
                 <div className={styles.navRight}>
                     {cookies.token ? (
                         <>
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
                         <FontAwesomeIcon icon={faCartShopping} />
                         <FontAwesomeIcon icon={faUser} />
                         </>
