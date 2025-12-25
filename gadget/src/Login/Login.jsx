@@ -31,6 +31,7 @@ const Login = () => {
     const handleSuccess = (msg) =>
         toast.success(msg, {
         position: "bottom-left",
+        theme: "dark"
         });
     const handleSubmit = async (e) => {
         e.preventDefault();

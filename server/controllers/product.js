@@ -19,7 +19,21 @@ const listProducts = async(req, res) =>{
     }
 }
 
+const listOneProduct = async (req, res)=>{
+    try{
+        const { id } = req.params
+        const product = await Product.findById(id)
+        if(product){
+            res.status(200).json({product})
+        }
+        res.send("No")
+    } catch(error){
+        console.log(error)
+    }
+}
+
 export {
     addProduct,
-    listProducts
+    listProducts,
+    listOneProduct
 }

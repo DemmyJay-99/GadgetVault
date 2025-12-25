@@ -20,6 +20,7 @@ app.use(
 );
 app.use("/", route)
 app.use("/api/products", router)
+app.use("/", router)
 const start = async()=>{
     try {
         await connectURI(URI);
