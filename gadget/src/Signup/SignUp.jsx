@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
 import { ToastContainer, toast} from "react-toastify"
+import styles from '../Login/Login.module.css'
+import signupstyles from './Signup.module.css'
+import image from  '../assets/Logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faArrowRight, faCartShopping, faComputer, faVanShuttle } from '@fortawesome/free-solid-svg-icons'
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -52,10 +57,11 @@ const SignUp = () => {
         })
     }
   return (
-    <div className='form_container'>
-        <h2>Signup</h2>
-        <form onSubmit={handleSubmit}>
-            <div>
+    <div className={styles.formBody}>
+    <div className={styles.form_container}>
+        <form onSubmit={handleSubmit} className={styles.loginForm}>
+        <h2 className={styles.signHead}>Create an account</h2>
+            <div className={styles.inputGroup}>
                 <label htmlFor='email'>Email</label>
                 <input 
                     type='email'
@@ -65,7 +71,7 @@ const SignUp = () => {
                     onChange={handleOnChange}
                     />
             </div>
-            <div>
+            <div className={styles.inputGroup}>
           <label htmlFor="email">Username</label>
           <input
             type="text"
@@ -75,7 +81,7 @@ const SignUp = () => {
             onChange={handleOnChange}
           />
         </div>
-        <div>
+        <div className={styles.inputGroup}>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -85,12 +91,33 @@ const SignUp = () => {
             onChange={handleOnChange}
           />
         </div>
-        <button type="submit">Submit</button>
-        <span>
-          Already have an account? <Link to={"/login"}>Login</Link>
-        </span>
+        <button type="submit">
+            Signup
+            <FontAwesomeIcon icon={faArrowRight}/>
+        </button>
+        <p>Already have an account?</p>
+        <Link to={"/login"}>Login</Link>
         </form>
         <ToastContainer />
+    </div>
+     <div className={styles.gadget}>
+                <img src={image}/>
+                <h1>Premium Gadgets & Electronics</h1>
+                <div className={styles.advert}>
+                    <div className={styles.item}>
+                        <FontAwesomeIcon icon={faComputer} className={styles.icon}/>
+                       <p>Latest Technology</p> 
+                    </div>
+                    <div className={styles.item}>
+                        <FontAwesomeIcon icon={faVanShuttle} className={styles.icon}/>
+                        <p>Fast Delivery</p>
+                    </div>
+                    <div className={styles.item}>
+                        <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
+                        <p> Affordable Prices</p>
+                    </div>
+                </div>
+            </div>
     </div>
   )
 }

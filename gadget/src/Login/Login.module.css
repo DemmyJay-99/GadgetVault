@@ -17,6 +17,14 @@
     /* background-color: #ccc; */
 }
 
+.signHead{
+    margin-top: 15px;
+}
+
+p{
+    font-size: .9rem;
+}
+
 .loginForm{
     background-color: rgba(77, 43, 43, 0.273);
     height: 90%;
@@ -27,7 +35,7 @@
     place-items: center;
     place-content: center;
     border-radius: 10px;
-    gap: .7rem;
+    gap: .5rem;
     /* border: 1px solid; */
     h2{
         margin-bottom: 15px;
