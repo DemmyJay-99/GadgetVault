@@ -4,7 +4,7 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import styles from './Login.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faCartShopping, faComputer, faEnvelope, faLock, faVanShuttle } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faCartShopping, faComputer, faEnvelope, faEye, faEyeSlash, faLock, faVanShuttle } from '@fortawesome/free-solid-svg-icons'
 import image from  '../assets/Logo.png'
 
 const Login = () => {
@@ -61,6 +61,22 @@ const Login = () => {
         password: "",
         });
     };
+        function revealPassword(){
+            const eye = document.getElementById('eye')
+            const eyeSlash = document.getElementById('eyeSlash')
+            const input = document.getElementById("passwordInput")
+
+            const isOpen = eye.classList.toggle('active');
+            if(isOpen){
+                eyeSlash.style.display = 'block'
+                eye.style.display = 'none' 
+                input.type = "text"
+            } else{
+                eyeSlash.style.display = 'none'
+                eye.style.display = 'block' 
+                input.type = "password"
+            }
+    }
 
     return (
         <div className={styles.formBody}>
@@ -73,6 +89,7 @@ const Login = () => {
                         <FontAwesomeIcon icon={faEnvelope}/>
                         E-mail
                     </label>
+                    <div>
                     <input
                         type="email"
                         name="email"
@@ -80,19 +97,25 @@ const Login = () => {
                         placeholder="Enter your email"
                         onChange={handleOnChange}
                     />
+                    </div>
                 </div>
                 <div className={styles.inputGroup}>
                     <label htmlFor='password'>
                         <FontAwesomeIcon icon={faLock}/>
                         Password
                     </label>
+                    <div>
                     <input
                         type="password"
                         name="password"
                         value={password}
                         placeholder="Enter your password"
+                        id='passwordInput'
                         onChange={handleOnChange}
                     />
+                    <FontAwesomeIcon icon={faEye} className={styles.eye} id='eye' onClick={revealPassword}/>
+                    <FontAwesomeIcon icon={faEyeSlash} className={styles.eyeSlash} id='eyeSlash' onClick={revealPassword}/>
+                    </div>
                 </div>
                 <button type="submit">
                     Login
