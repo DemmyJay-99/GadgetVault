@@ -8,9 +8,20 @@ function Hero(){
         <>
             <section id="home" className={styles.hero}>
                <div className={styles.heroLeft}>
+                <div className={styles.leftTop}>
                     <h1>Premium Tech</h1>
                     <h1>Made Simple</h1>
-                    <p>Get cutting-edge performance at the guaranteed best prices. Explore our exclusive deals and limited-time offers today.</p>
+                    <p>Get cutting-edge performance at the guaranteed best prices.
+                    Explore our exclusive deals and limited-time offers today.</p>
+                </div>
+                <div className={styles.leftBottom}>
+                    <button className={styles.button1}>
+                        Get started 
+                        <div></div>
+                        <span>20% OFF!</span>
+                    </button>
+                    <button className={styles.button2}>Contact us</button>
+                </div>
                </div>
                <div className={styles.heroRight}>
                 <div className={styles.rightTop}>
