@@ -4,7 +4,8 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import styles from './Login.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faCartShopping, faComputer, faEnvelope, faLock, faVanShuttle } from '@fortawesome/free-solid-svg-icons'
+import image from  '../assets/Logo.png'
 
 const Login = () => {
     const navigate = useNavigate()
@@ -64,26 +65,38 @@ const Login = () => {
         <div className={styles.formBody}>
         <div className={styles.form_container}>
             <form onSubmit={handleSubmit} className={styles.loginForm}>
-            <h2>Login to your account</h2>
+                <h1>Welcome Back!</h1>
+            <h4>Login to your account</h4>
                 <div className={styles.inputGroup}>
+                    <label htmlFor='email'>
+                        <FontAwesomeIcon icon={faEnvelope}/>
+                        E-mail
+                    </label>
                     <input
                         type="email"
                         name="email"
                         value={email}
-                        placeholder="E-mail"
+                        placeholder="Enter your email"
                         onChange={handleOnChange}
                     />
                 </div>
                 <div className={styles.inputGroup}>
+                    <label htmlFor='password'>
+                        <FontAwesomeIcon icon={faLock}/>
+                        Password
+                    </label>
                     <input
                         type="password"
                         name="password"
                         value={password}
-                        placeholder="Password"
+                        placeholder="Enter your password"
                         onChange={handleOnChange}
                     />
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit">
+                    Login
+                    <FontAwesomeIcon icon={faArrowRight}/>
+                </button>
                 <div className={styles.options}>
                     <div className={styles.first}></div>
                     <p>or</p>
@@ -94,7 +107,22 @@ const Login = () => {
             <ToastContainer />
         </div>
         <div className={styles.gadget}>
-            <h1>GadgetVault</h1>
+            <img src={image}/>
+            <h1>Premium Gadgets & Electronics</h1>
+            <div className={styles.advert}>
+                <div className={styles.item}>
+                    <FontAwesomeIcon icon={faComputer} className={styles.icon}/>
+                   <p>Latest Technology</p> 
+                </div>
+                <div className={styles.item}>
+                    <FontAwesomeIcon icon={faVanShuttle} className={styles.icon}/>
+                    <p>Fast Delivery</p>
+                </div>
+                <div className={styles.item}>
+                    <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
+                    <p> Affordable Prices</p>
+                </div>
+            </div>
         </div>
         </div>
     );
