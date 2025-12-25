@@ -26,19 +26,16 @@ function Header() {
         <header>
             <nav id='navbar'>
                 <div className={styles['navLeft']}>
-                    <FontAwesomeIcon icon={faBolt} />
-                    <p className={styles.logoText}>GadgetVault</p>
+                    {/* <FontAwesomeIcon icon={faBolt} /> */}
+                    <p className={styles.logoText}>GADGETVAULT</p>
                 </div>
                 <div className={styles.navLinks}>
                     <a href='#home'>Home</a>
-                    <a href='#products'>Products</a>
+                    <a href='#products'>New Releases</a>
                     <a href='#categories'>Categories</a>
                     <a href='#contact'>Contact</a>
                 </div>
                 <div className={styles.navRight}>
-                    {/* <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <FontAwesomeIcon icon={faCartShopping} />
-                    <FontAwesomeIcon icon={faUser} /> */}
                     {cookies.token ? (
                         <>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />

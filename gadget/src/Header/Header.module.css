@@ -6,7 +6,7 @@ nav{
     gap: 1rem;
     /* justify-content: space-between; */
     /* background-color: rgb(255, 255, 255); */
-    background-color: #0f0920;
+    /* background-color: #0f0920; */
     /* border-bottom:solid 1px black; */
     padding: 20px;
     max-height: 90px;
@@ -65,19 +65,31 @@ nav.scrolled{
     a{
         text-decoration: none;
         position: relative;
+        text-align: center;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        height: 2rem;
+        z-index: 1;
+        font-size: .9rem;
+        text-transform: uppercase;
     }
     a::after{
         content: "";
         position: absolute;
         left: 0;
-        bottom: -4px;
+        /* bottom: 100%; */
         width: 0%;
-        height: 2px;
-        background-color: blue;
+        height: 2rem;
+        background-color: rgb(241, 241, 255);
         transition: width 0.4s ease;
+        z-index: -1;
     }
     a:hover::after{
         width: 100%;
+    }
+     a:hover{
+        color: #000;
     }
 }
 
@@ -90,9 +102,6 @@ nav.scrolled{
     *{
         transition: .4s;
         cursor: pointer;
-        &:hover{
-            color: blue;
-        }
     }
     a{
         font-size: 1rem;

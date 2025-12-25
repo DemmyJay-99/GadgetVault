@@ -12,14 +12,22 @@ html{
     -webkit-text-size-adjust: 100%;
     /* height: 100%; */
     overflow-x: hidden;
+        scrollbar-width:none;
+    scrollbar-color: #000;
 }
 
 body{
     color: #ffff;
     /* color: #666666; */
     /* background-color: rgb(254, 254, 255);  */
-    background-color: #0f0920;
-    font-family: 'Roboto', sans-serif;
+    background-image: url('./assets/97303.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* -ms-overflow-style: none; */
 }
 
 main{
