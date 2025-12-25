@@ -91,7 +91,7 @@ const SignUp = () => {
           />
         </div>
         <button type="submit">
-            Signup
+            Sign-up
             <FontAwesomeIcon icon={faArrowRight}/>
         </button>
         <p>Already have an account?</p>
