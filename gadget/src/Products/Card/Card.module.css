@@ -12,7 +12,7 @@
     border: 1px solid transparent;
     width: 100%;
     &:hover{
-        border: 1px solid blue;
+        border: 1px solid rgb(0, 0, 0);
         box-shadow: 0 12px 32px rgba(147, 51, 234, 0.2);
         transform: translateY(-5px);
         /* background-color: #000; */
@@ -21,7 +21,7 @@
 
 .cardTop{
     height: 60%;
-    background-color: rgb(14, 14, 89);
+    background-color: rgb(125, 20, 20);
     border-radius: 10px 10px 0px 0px;
     display: flex;
     place-content: center;
@@ -37,13 +37,13 @@
     flex-direction: column;
     height: 40%;
     padding: 20px;
-    background-color: rgb(77, 12, 61);
+    background-color: rgb(32, 4, 4);
     border-radius: 0 0 10px 10px;
     gap: 1rem;
     .category{
         font-size: .8rem;
         text-transform: uppercase;
-        color: blue;
+        color: rgb(255, 255, 255);
     }
     .name{
         font-size: 1.2rem;
@@ -61,7 +61,8 @@
     place-content: space-between;
     margin-top: 20px;
     .icon{
-        background-color: blue;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
         width: 25px;
         height: 25px;
         padding: 5px;
