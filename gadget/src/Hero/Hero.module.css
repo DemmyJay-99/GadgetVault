@@ -47,9 +47,11 @@
         display: flex;
         gap: 1rem;
         width: 340px;
-        border-radius: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #000;
         div{
-            background-color: #fff;
+         background-color: #fff;
             height: 60%;
             width: 1px;
         }
@@ -60,6 +62,7 @@
     .button2{
         width: 200px;
         border-radius: 15px;
+        corner-shape: bevel;
     }
     button{
         all: unset;
@@ -70,30 +73,12 @@
         height: 50px;
         cursor: pointer;
         pointer-events: none;
-    }
-}
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+         &:hover{
 
-.buttons{
-    min-height: 70px;
-    display: flex;
-    place-items: center;
-    place-content: start;
-    /* border: 1px solid; */
-    gap: 1rem;
-    max-width: 500px;
-    /* flex-wrap: wrap; */
-    *{
-        color: #fff;
-        cursor: pointer;
-        text-decoration: none;
-        outline: 0;
-        border: 0;
-        border-radius: 7px;
-        /* color: #ccc; */
-        transition: .4s;
-        font-size: 1rem;
-        font-weight: 800;
-    }
+        }}
 }
 
 .shop{
@@ -149,8 +134,9 @@
             max-width: 50vw;
             position: relative;
             padding-left: 32px;
-            background-color: #4c0b0b;
+            background-color: transparent;
             border-radius:10px 0 0px 10px;
+            border: 1px solid #ccc;
             transition: .2s;
             &::placeholder{
                 color: #c8b8b8;
